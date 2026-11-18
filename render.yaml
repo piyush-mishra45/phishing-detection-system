@@ -1,0 +1,18 @@
+# Render blueprint (backend). Frontend goes to Vercel (see docs/DEPLOYMENT.md).
+services:
+  - type: web
+    name: phishguard-api
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    # 1 worker + threads: the rate limiter and token-revocation list are in-memory (see docs/DEPLOYMENT.md for Redis).
+    startCommand: cd backend && gunicorn run:app --workers 1 --threads 4 --timeout 90 --bind 0.0.0.0:$PORT
+    healthCheckPath: /api/health
+    envVars:
+      - { key: PYTHON_VERSION, value: 3.11.9 }
+      - { key: FLASK_ENV, value: production }
+      - { key: TRUST_PROXY, value: "1" }
+      - { key: SECRET_KEY, generateValue: true }
+      - { key: DATABASE_URL, sync: false }   # mysql+pymysql://USER:PASS@HOST:3306/DB
+      - { key: CORS_ORIGINS, sync: false }   # https://your-app.vercel.app
+      - { key: ADMIN_EMAIL, sync: false }

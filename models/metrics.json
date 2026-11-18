@@ -1,0 +1,166 @@
+[
+  {
+    "model_name": "Email: TF-IDF + Logistic Regression",
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0,
+    "roc_auc": 1.0,
+    "confusion_matrix": [
+      [
+        55,
+        0
+      ],
+      [
+        0,
+        60
+      ]
+    ],
+    "trained_at": "2026-11-17T07:07:59",
+    "dataset": "sample_phishing_emails.csv",
+    "is_demo_data": true,
+    "best_params": {
+      "C": 0.3
+    }
+  },
+  {
+    "model_name": "Email: TF-IDF + Naive Bayes",
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0,
+    "roc_auc": 1.0,
+    "confusion_matrix": [
+      [
+        55,
+        0
+      ],
+      [
+        0,
+        60
+      ]
+    ],
+    "trained_at": "2026-11-17T07:07:59",
+    "dataset": "sample_phishing_emails.csv",
+    "is_demo_data": true,
+    "best_params": {
+      "alpha": 0.05
+    }
+  },
+  {
+    "model_name": "Email: TF-IDF + Random Forest",
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0,
+    "roc_auc": 1.0,
+    "confusion_matrix": [
+      [
+        55,
+        0
+      ],
+      [
+        0,
+        60
+      ]
+    ],
+    "trained_at": "2026-11-17T07:08:03",
+    "dataset": "sample_phishing_emails.csv",
+    "is_demo_data": true,
+    "best_params": {
+      "max_depth": null,
+      "n_estimators": 200
+    }
+  },
+  {
+    "model_name": "Email: DEPLOYED (TF-IDF + Logistic Regression, calibrated)",
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0,
+    "roc_auc": 1.0,
+    "confusion_matrix": [
+      [
+        55,
+        0
+      ],
+      [
+        0,
+        60
+      ]
+    ],
+    "trained_at": "2026-11-17T07:08:03",
+    "dataset": "sample_phishing_emails.csv",
+    "is_demo_data": true
+  },
+  {
+    "model_name": "Website: Random Forest",
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0,
+    "roc_auc": 1.0,
+    "confusion_matrix": [
+      [
+        80,
+        0
+      ],
+      [
+        0,
+        80
+      ]
+    ],
+    "trained_at": "2026-11-17T07:08:08",
+    "dataset": "sample_phishing_urls.csv",
+    "is_demo_data": true,
+    "best_params": {
+      "max_depth": null,
+      "n_estimators": 200
+    }
+  },
+  {
+    "model_name": "Website: Logistic Regression",
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0,
+    "roc_auc": 1.0,
+    "confusion_matrix": [
+      [
+        80,
+        0
+      ],
+      [
+        0,
+        80
+      ]
+    ],
+    "trained_at": "2026-11-17T07:08:08",
+    "dataset": "sample_phishing_urls.csv",
+    "is_demo_data": true,
+    "best_params": {
+      "logisticregression__C": 0.1
+    }
+  },
+  {
+    "model_name": "Website: DEPLOYED (Random Forest, calibrated)",
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0,
+    "roc_auc": 1.0,
+    "confusion_matrix": [
+      [
+        80,
+        0
+      ],
+      [
+        0,
+        80
+      ]
+    ],
+    "trained_at": "2026-11-17T07:08:08",
+    "dataset": "sample_phishing_urls.csv",
+    "is_demo_data": true
+  }
+]
